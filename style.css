@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Ubuntu;
+    font-weight: 400;
+    src: url(./fonts/Ubuntu-Regular.ttf);
+}
+
+*{
+    font-family: Ubuntu;
+}
 body{
     margin: 0;
     margin: auto;
@@ -17,6 +26,7 @@ body{
 .navbar p{
     margin-right: 40px;
 }
+
 .contacts{
     display: flex;
 }
@@ -40,24 +50,59 @@ body{
     background-position-x: center;
     background-size: cover;
 }
+
 .values{
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid;
-    padding: 48px 60px;
 }
+.valueTitle{
+    font-size: 46px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.valueSubtitle{
+    font-size: 18px;
+    color: #787A80;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.valuesItems{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.valueItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 285px;
+    height: 285px;
+}
+
 
 .formTitle{
     font-weight: bold;
     font-size: 28px;
 }
 
+.formWrapper{
+    width: 100%;
+    padding-top: 120px;
+    background: linear-gradient( #E5E5E5 80%, #F4F5F6 80%);
+}
 .form{
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid;
+    background-color: white;
     /* padding: 48px;
     padding-top: 48px;
     padding-bottom: 48px;
@@ -79,4 +124,107 @@ body{
 
 .formInput input{
     padding: 12px 16px;
+}
+
+.formData button{
+    margin-top: 18px;
+    padding: 0px 32px;
+    height: 44px;
+    font-size: 14px;
+    background-color: #FF5A30;
+    color: white;
+    border: none;
+}
+
+.services{
+    padding-top: 120px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F4F5F6;
+}
+.servicesTitle{
+    font-size: 46px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.servicesSubtitle{
+    font-size: 18px;
+    color: #787A80;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.servicesItems{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.servicesItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    width: 285px;
+    height: 285px;
+    background-color: white;
+    transition: background-color 1s ease;
+}
+
+.servicesItem:hover{
+    background-color: orange;
+    transition: background-color 1s ease;
+}
+
+.servicesMore{
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    font-size: 28px;
+    font-weight: bold;
+    align-items: center;
+}
+
+.servicesBtn{
+    padding: 20px 40px;
+    height: 62px;
+    font-size: 18px;
+    background-color: #FF5A30;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.servicesBtn:hover{
+    background-color: brown;
+    transition: backgroun-color 0.5s ease;
+}
+.servicesBtn:active{
+    background-color: yellow;
+    
+}
+
+@media (max-width:750px){
+    .container{
+        padding: 0 15px;
+        width: unset;
+    }
+    .navbar{
+        display: none;
+    }
+    .contacts{
+        display: none;
+    }
+    .formData{
+        flex-direction: column;
+    }
+    .servicesItems{
+        flex-direction: column;
+    }
 }
